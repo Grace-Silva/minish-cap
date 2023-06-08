@@ -72,3 +72,30 @@ header .logo img:hover{
     background: rgb(113,87,26);
     background: linear-gradient(120deg, rgba(113,87,26,1) 0%, rgba(76,59,21,1) 50%, rgba(113,87,26,1) 100%);*/
 }
+
+/* bars menu */
+#bars-menu{
+    color: #f4f4f4;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 10001;
+    display: none;
+}
+
+/* hero section */
+section{
+    padding: 5rem;
+}
+
+.hero{
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+    border: solid;
+}
+
