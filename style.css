@@ -17,7 +17,6 @@ body{
     background: rgb(20,62,15);
     background: linear-gradient(120deg, rgba(20,62,15,1) 0%, rgba(35,153,20,0.6) 50%, rgba(20,62,15,1) 100%); 
     color: var(--white);
-    min-height: 100vh;
 }
 
 header{
@@ -99,3 +98,48 @@ section{
     border: solid;
 }
 
+.hero-text *{
+    margin-bottom: 8px;
+}
+
+.hero-text h4{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.hero-text h3{
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.hero-text h2{
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.hero-text p{
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.2rem;
+    opacity: .8;
+}
+
+.btn{
+    display: inline-block;
+    color: var(--white);
+    background: rgb(113,87,26);
+    background: linear-gradient(120deg, rgba(113,87,26,1) 0%, rgba(76,59,21,1) 50%, rgba(113,87,26,1) 100%); 
+    border: 2px solid transparent;
+    border-radius: 30px;
+    padding: 8px 12px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+.btn:hover{
+    background: rgb(0,90,0);
+    background: linear-gradient(95deg, rgba(0,90,0,1) 0%, rgba(141,182,0,0.5) 50%, rgba(0,90,0,1) 100%); 
+}
+
+.cta{
+
+}
