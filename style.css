@@ -230,3 +230,37 @@ footer .social-media a:hover{
         font-size: 1.1rem;
     }
 }
+
+@media(max-width: 968px) and (min-width: 768px){
+
+    #bars-menu{
+        display: block;
+        padding: 8px;
+        border: none;
+        border-radius: 100%;
+        background: #23a721;
+        transition: .2s ease;
+    }
+    #bars-menu:hover{
+        background: var(--gold);
+    }
+
+    .navLinks{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 50%;
+        right: -100%;
+        padding: 2rem 1rem;
+        width: 40vw;
+        height: 50vh;
+        justify-content: space-between;
+        align-items: center;
+        background: rgba(0, 90, 0, 0.7);
+        transition: .5s ease-in-out;
+        
+    }
+    .navLinks.open{
+        right: 4.2rem;
+    }
+}
