@@ -95,7 +95,6 @@ section{
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 2rem;
-    border: solid;
 }
 
 .hero-text *{
@@ -127,19 +126,61 @@ section{
 .btn{
     display: inline-block;
     color: var(--white);
-    background: rgb(113,87,26);
-    background: linear-gradient(120deg, rgba(113,87,26,1) 0%, rgba(76,59,21,1) 50%, rgba(113,87,26,1) 100%); 
-    border: 2px solid transparent;
+    border: 1px solid var(--white);
     border-radius: 30px;
-    padding: 8px 12px;
+    padding: 8px 16px;
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 500;
+    transition: .5s ease-in-out;
 }
 .btn:hover{
+    transform: scale(1.1);
     background: rgb(0,90,0);
     background: linear-gradient(95deg, rgba(0,90,0,1) 0%, rgba(141,182,0,0.5) 50%, rgba(0,90,0,1) 100%); 
 }
 
-.cta{
+.btn i{
+    margin-left: 8px;
+    font-size: 1.2rem;
+}
 
+.cta{
+    background: rgb(113,87,26);
+    background: linear-gradient(120deg, rgba(113,87,26,1) 0%, rgba(76,59,21,1) 50%, rgba(113,87,26,1) 100%);
+    margin-right: 12px; 
+    vertical-align: middle;
+}
+
+footer{
+    display: flex;
+    padding: 1rem 4rem;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(0,90,0);
+    background: linear-gradient(95deg, rgba(0,90,0,.5) 0%, rgba(141,182,0,.3) 50%, rgba(0,90,0,.5) 100%);
+}
+
+
+footer .logo{
+    width: 100px;
+}
+
+footer .logo img{
+    width: 100%;
+}
+
+footer p{
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+footer .social-media a{
+    color: var(--white);
+    font-size: 1.2rem;
+    margin-right: 12px;
+    transition: .2s ease-in-out;
+}
+footer .social-media a:hover{
+   font-size: 1.3rem;
 }
