@@ -97,6 +97,14 @@ section{
     gap: 2rem;
 }
 
+.hero-image{
+    width: 400px;
+}
+
+.hero-image img{
+    width: 100%;
+}
+
 .hero-text *{
     margin-bottom: 8px;
 }
@@ -124,11 +132,12 @@ section{
 }
 
 .btn{
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     color: var(--white);
     border: 1px solid var(--white);
     border-radius: 30px;
-    padding: 8px 16px;
+    padding: 12px 16px;
     font-size: 1rem;
     font-weight: 500;
     transition: .5s ease-in-out;
@@ -139,16 +148,18 @@ section{
     background: linear-gradient(95deg, rgba(0,90,0,1) 0%, rgba(141,182,0,0.5) 50%, rgba(0,90,0,1) 100%); 
 }
 
-.btn i{
-    margin-left: 8px;
+.btn > i{
+    margin-bottom: 0;
     font-size: 1.2rem;
+    margin-left: 6px;
+    vertical-align: middle;
+
 }
 
 .cta{
     background: rgb(113,87,26);
     background: linear-gradient(120deg, rgba(113,87,26,1) 0%, rgba(76,59,21,1) 50%, rgba(113,87,26,1) 100%);
     margin-right: 12px; 
-    vertical-align: middle;
 }
 
 footer{
@@ -191,3 +202,31 @@ footer .social-media a:hover{
 }
 
 /* media querys */
+
+/* tablets */
+@media (max-width: 990px){
+
+    header{
+        padding: 2rem 4rem;
+    }
+
+    section{
+        padding: 2rem;
+    }
+
+    .hero-image{
+        width: 320px;
+    }
+
+    .hero-text *{
+        margin-bottom: 12px;
+    }
+
+    .hero-text h2{
+        font-size: 1.3rem;
+    }
+
+    .hero-text p{
+        font-size: 1.1rem;
+    }
+}
