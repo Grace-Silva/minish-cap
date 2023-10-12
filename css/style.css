@@ -1,13 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
+@font-face {
+    font-family: "zelda";
+    src: url("./fonts/ReggaeOne-Regular.ttf");
+}
+
 :root{
     --white: #f4f4f4;
     --gold : #71571a;
+    --coffee: #674215;
     --green: #54b435;
     --emphasisGreen: #379237;
     --yellow: #F0FF42;
     --transition: all ease-in-out .5s;
     --imageShadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+    --innerWidth: 2em 4em;
 }
 
 *{  padding: 0;
@@ -18,6 +25,11 @@
     list-style: none;
     outline: none;
     transition: var(--transition);
+    font-family: "zelda";
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 body{
@@ -31,11 +43,13 @@ body{
     z-index: 999;
 }
 
+/*--------------------------*/
+/* starts navbar/header */
 .navbar{
     width: 100%;
     right: 0;
     top: 0;
-    padding: 2em 4em;
+    padding: var(--innerWidth);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -44,11 +58,11 @@ body{
     z-index: 1000;
     transition: var(--transition);
 }
-
+/*/
 .navbar.sticky{
     position: fixed;
     background: var(--emphasisGreen);
-}
+}*/
 
 /* logo */
 .navbar .logo{
@@ -75,8 +89,7 @@ body{
 .navLinks li a{
     display: inline-block;
     color: var(--white);
-    font-weight: 500;
-    font-size: 1.2em;
+    font-size: 1.3em;
     transition: var(--transition);
 }
 .navLinks li a:hover{
@@ -85,27 +98,22 @@ body{
 
 /* bars menu */
 #bars-menu{
-    color: #f4f4f4;
+    color: var(--white);
     font-size: 1.5rem;
     cursor: pointer;
-    z-index: 10001;
+    z-index: 1001;
     display: none;
 }
 
-/* hero section */
-section{
-    padding: 5rem;
-}
+
+/*--------------------------------*/
+/* starts hero section */
 
 .hero{
-    width: 100%;
-    height: 100%;
-    min-height: 100vh;
-    position: relative;
+    padding: 3em 4em;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    gap: 2rem;
 }
 
 .hero-image{
@@ -114,68 +122,65 @@ section{
 
 .hero-image img{
     width: 100%;
+    filter: drop-shadow(5px 10px 0px rgba(0, 0, 0, 0.2));
 }
 
-.hero-text *{
-    margin-bottom: 8px;
-}
-
-.hero-text h4{
-    font-size: 1rem;
-    font-weight: 400;
+.hero-text{
+    border: solid red;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 2em;
 }
 
 .hero-text h3{
-    font-size: 1.2rem;
-    font-weight: 700;
+    font-size: 1.2em;
+    font-weight: 500;
 }
 
 .hero-text h2{
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 1.5em;
 }
 
 .hero-text p{
     font-style: italic;
-    font-weight: 500;
-    font-size: 1.2rem;
+    font-weight: 400;
+    font-size: 1.2em;
     opacity: .8;
+    letter-spacing: 1px;
+}
+
+.btn:first-child{
+    background: var(--gold);
+    margin-right: 1em; 
 }
 
 .btn{
     display: inline-flex;
     align-items: center;
+    gap: 8px;
     color: var(--white);
     border: 1px solid var(--white);
     border-radius: 30px;
     padding: 12px 16px;
-    font-size: 1rem;
+    font-size: 1em;
     font-weight: 500;
-    transition: .5s ease-in-out;
+    transition: var(--transition);
 }
 .btn:hover{
-    transform: scale(1.1);
-    background: rgb(0,90,0);
-    background: linear-gradient(95deg, rgba(0,90,0,1) 0%, rgba(141,182,0,0.5) 50%, rgba(0,90,0,1) 100%); 
+    background: var(--emphasisGreen);
 }
 
 .btn > i{
-    margin-bottom: 0;
-    font-size: 1.2rem;
-    margin-left: 6px;
-    vertical-align: middle;
-
+    font-size: 1.2em;
 }
 
-.cta{
-    background: rgb(113,87,26);
-    background: linear-gradient(120deg, rgba(113,87,26,1) 0%, rgba(76,59,21,1) 50%, rgba(113,87,26,1) 100%);
-    margin-right: 12px; 
-}
+
 
 footer{
     display: flex;
-    padding: 1rem 4rem;
+    padding: 1em 4em;
     justify-content: space-between;
     align-items: center;
     background: rgb(0,90,0);
@@ -193,23 +198,24 @@ footer .logo img{
 
 footer p{
     color: var(--white);
-    font-size: 1rem;
+    font-size: 1em;
     font-weight: 500;
 }
 
 footer .social-media a{
-    display: inline-block;
-    padding: 8px;
-    border-radius: 8px;
+    display: inline-flexgit;
+    border: none;
+    padding: 12px;
+    border-radius: 100%;
     background: transparent;
     color: var(--white);
-    font-size: 1.2rem;
+    font-size: 1.2em;
     margin-right: 12px;
-    transition: .2s ease-in-out;
+    transition: var(--transition);
 }
 footer .social-media a:hover{
     transform: scale(1.1);
-   background: var(--gold);
+    background: var(--gold);
 }
 
 /* media querys */
