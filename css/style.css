@@ -108,7 +108,6 @@ body{
 
 /*--------------------------------*/
 /* starts hero section */
-
 .hero{
     padding: 3em 4em;
     display: grid;
@@ -126,7 +125,6 @@ body{
 }
 
 .hero-text{
-    border: solid red;
     display: flex;
     flex-direction: column;
     gap: 1em;
@@ -174,10 +172,14 @@ body{
 
 .btn > i{
     font-size: 1.2em;
+    margin-bottom: 0;
 }
+/* ends hero section */
+/*-----------------------------------*/
 
 
-
+/*------------------------*/
+/* starts footer */
 footer{
     display: flex;
     padding: 1em 4em;
@@ -186,7 +188,6 @@ footer{
     background: rgb(0,90,0);
     background: linear-gradient(95deg, rgba(0,90,0,.5) 0%, rgba(141,182,0,.3) 50%, rgba(0,90,0,.5) 100%);
 }
-
 
 footer .logo{
     width: 100px;
@@ -203,7 +204,7 @@ footer p{
 }
 
 footer .social-media a{
-    display: inline-flexgit;
+    display: inline-flex;
     border: none;
     padding: 12px;
     border-radius: 100%;
@@ -217,35 +218,41 @@ footer .social-media a:hover{
     transform: scale(1.1);
     background: var(--gold);
 }
+/* ends footer */
 
 /* media querys */
 
-/* tablets */
-@media (max-width: 990px){
+/* small laptops */
+@media (max-width: 998px){
 
-    .navbar{
-        padding: 2rem 4rem;
+    .navbar .logo{
+        width: 140px;
     }
 
-    section{
-        padding: 2rem;
+    .navLinks{
+        gap: 2em;
+    }
+    
+    .navLinks li a{
+        font-size: 1.2em;
     }
 
+    .hero{
+        padding: 2em;
+    }
+    
     .hero-image{
-        width: 320px;
+        width: 360px;
     }
 
-    .hero-text *{
-        margin-bottom: 12px;
+    .hero-text{
+        gap: .8em;
     }
 
-    .hero-text h2{
-        font-size: 1.3rem;
+    footer .logo{
+        width: 80px;
     }
 
-    .hero-text p{
-        font-size: 1.1rem;
-    }
 }
 
 @media(max-width: 968px){
