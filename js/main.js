@@ -2,6 +2,7 @@ let menu = document.querySelector('#bars-menu');
 let navLinks = document.querySelector('.navLinks');
 
 menu.onclick=()=>{
+    menu.classList.toggle('close');
     navLinks.classList.toggle('open');
 }
 /*
