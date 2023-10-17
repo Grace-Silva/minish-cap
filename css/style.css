@@ -211,6 +211,51 @@ body{
 /* ends hero section */
 /*-----------------------------------*/
 
+/*-------------------------------------*/
+/* starts arsenal Section */
+.arsenalSection{
+    padding: 4em;
+    border: solid red;
+    text-align: center;
+}
+
+.titleSection{
+    font-weight: 700;
+    font-size: 1.5em;}
+
+.itemsContainer{
+    border: none;
+    border-radius: 16px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    padding: 2em;
+    gap: 2em;
+}
+
+
+.item{
+    padding: 1em;
+    box-shadow: inset 0px 0px 8px 0px rgba(0, 0, 0, 0.4);
+    border: 1px solid transparent;
+    border-radius: 16px;
+    background: transparent;
+    opacity: .6;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.item:hover{
+    opacity: 1;
+    transform: scale(1.1);
+    box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.2);
+}
+
+.itemImage{
+    width: 60px;
+    height: 100%;
+}
+
 
 /*------------------------*/
 /* starts footer */
