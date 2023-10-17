@@ -88,13 +88,28 @@ body{
 
 .navLinks li a{
     display: inline-block;
+    position: relative;
     color: var(--white);
     font-size: 1.3em;
     transition: var(--transition);
+    text-decoration: none;
 }
+.navLinks li a::after{
+    content: "";
+    display: block;
+    margin: auto;
+    height: 2px;
+    width: 0px;
+    transition: var(--transition);
+}
+.navLinks li a:hover::after{
+    width: 100%;
+    background: var(--white);
+}
+/*
 .navLinks li a:hover{
     transform: scale(1.1);
-}
+}*/
 
 /* bars menu */
 #bars-menu{
@@ -167,6 +182,7 @@ body{
 .btn:first-child{
     background: var(--gold);
     margin-right: 1em; 
+    border: 1px solid transparent;
 }
 
 .btn{
@@ -179,10 +195,13 @@ body{
     padding: 12px 16px;
     font-size: 1em;
     font-weight: 500;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
     transition: var(--transition);
 }
 .btn:hover{
-    background: var(--emphasisGreen);
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5),
+        0 0 20px rgba(255, 255, 255, 0.2);
+    border: 1px solid var(--white);
 }
 
 .btn > i{
