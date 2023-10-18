@@ -5,22 +5,27 @@ menu.onclick=()=>{
     menu.classList.toggle('close');
     navLinks.classList.toggle('open');
 }
-/*
-// selección del header
-let navbar = document.querySelector(".navbar");
-let limit =navbar.offsetTop;
-/* cuando el usuario deslize la página 
-hacia abajo se ejecutará nuestra función:
-window.onscroll = function(){
-    showStickyMenu()    
-};
 
-// intercambiar la clase sticky:
-function showStickyMenu(){
-    if(window.pageYOffset > limit){
-        navbar.classList.add("sticky");
+
+/* ir hacia arriba */
+/** función para el botón ir arriba **/
+const goUp = document.querySelector(".goUpButton");
+    goUp.addEventListener("click", () => {
+    window.scrollTo(0, 0);
+});
+
+/* aparecer y desaparecer botón */
+window.addEventListener("scroll", (e)=>{
+    let y = document.documentElement.scrollTop;
+
+    if(y >= 120){
+        goUp.classList.add("active");
+        goUp.classList.remove("hide")
     }
     else{
-        navbar.classList.remove("sticky");
+        goUp.classList.add("hide");
+        goUp.classList.remove("active");
     }
-}*/
+    
+});
+
