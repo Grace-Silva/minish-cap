@@ -464,6 +464,7 @@ footer .social-media a:hover{
     color: var(--white);
     transition: var(--transition);
     font-size: 1em;
+    transform: translateY(0);
     z-index: 10000;
 }
 .goUpButton:hover{
