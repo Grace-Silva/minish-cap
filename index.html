@@ -46,7 +46,7 @@
 
             <a href="https://www.nintendo.es/Juegos/Game-Boy-Advance/The-Legend-of-Zelda-The-Minish-Cap-267486.html#Informaci_n"  target="_blank" class="btn cta">Play<i class="fa-solid fa-gamepad"></i></a>
 
-            <a href="https://www.nintendo.es/Juegos/Game-Boy-Advance/The-Legend-of-Zelda-The-Minish-Cap-267486.html" class="btn" target="_blank">Watch Trailer<i class="fa-regular fa-circle-play"></i></a>
+            <a href="#" class="btn" id="openVideo">Watch Trailer<i class="fa-regular fa-circle-play"></i></a>
 
         </div>
         
@@ -152,7 +152,19 @@
 <!--goup button -->
 <button class="goUpButton hide" id="goup"><i class="fa-solid fa-chevron-up"></i></button>
 
-<script src="./js/main.js"></script>
+<!-- link video:
+https://www.youtube.com/watch?v=7J-7OZgxvJk
+-->
+
+        <div class="videoContainer" id="videocontainer">
+
+            <i class="fa-solid fa-xmark closeIcon" id="closeVideo"></i>
+            <video src="./minishCap-Trailer.mp4" class="video" id="trailerVideo" controls muted></video>
+        </div>
+    
+
+
+<script src="./js/main.js" defer></script>
 
 </body>
 </html>

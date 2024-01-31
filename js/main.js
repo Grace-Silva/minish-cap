@@ -1,20 +1,20 @@
 let menu = document.querySelector('#bars-menu');
 let navLinks = document.querySelector('.navLinks');
 
+// función para contraer el menú:
 menu.onclick=()=>{
     menu.classList.toggle('close');
     navLinks.classList.toggle('open');
 }
 
 
-/* ir hacia arriba */
 /** función para el botón ir arriba **/
 const goUp = document.querySelector(".goUpButton");
     goUp.addEventListener("click", () => {
     window.scrollTo(0, 0);
 });
 
-/* aparecer y desaparecer botón */
+/* aparecer y desaparecer botón de ir hacia arriba*/
 window.addEventListener("scroll", (e)=>{
     let y = document.documentElement.scrollTop;
 
@@ -29,3 +29,19 @@ window.addEventListener("scroll", (e)=>{
     
 });
 
+/* función abrir y cerrar vídeo: */
+
+// selección de elementos: 
+const openVideo = document.getElementById("openVideo"); // boton play
+const videocontainer = document.getElementById("videocontainer");   // video background
+const closeVideo = document.getElementById("closeVideo");   // icono cerrar
+const video = document.getElementById("trailerVideo");  // video
+
+openVideo.addEventListener("click", abrirVideo);
+closeVideo.addEventListener("click", abrirVideo);
+
+function abrirVideo(){
+    videocontainer.classList.toggle("openVideo");
+    video.currentTime = 0;
+    video.pause();
+}
